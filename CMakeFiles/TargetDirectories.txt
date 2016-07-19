@@ -1,0 +1,2 @@
+/home/aghozlane/workspace/MetaboFlux/metaboflux/CMakeFiles/MetaBoFlux.exe.dir
+/home/aghozlane/workspace/MetaboFlux/metaboflux/doc/CMakeFiles/html.dir

@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level2/version3" level="2" version="3">
+  <model id="glycosome_2">
+    <listOfCompartments>
+      <compartment id="glycosome" size="1"/>
+      <compartment id="mitochondrie" size="1"/>
+      <compartment id="cytosol" size="1"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="AcetylCoa" compartment="mitochondrie" initialAmount="0" hasOnlySubstanceUnits="true"/>
+      <species id="Malate_mito" compartment="mitochondrie" initialAmount="0" hasOnlySubstanceUnits="true"/>
+      <species id="Acetate" compartment="mitochondrie" initialAmount="0" hasOnlySubstanceUnits="true"/>
+      <species id="NADH" compartment="glycosome" initialAmount="2000" hasOnlySubstanceUnits="true"/>
+      <species id="Succinate_2" compartment="mitochondrie" initialAmount="0" hasOnlySubstanceUnits="true"/>
+      <species id="NADPH" compartment="glycosome" initialAmount="2000" hasOnlySubstanceUnits="true"/>
+      <species id="NADPplus" compartment="glycosome" initialAmount="2000" hasOnlySubstanceUnits="true"/>
+      <species id="Pyruvate" compartment="cytosol" initialAmount="0" hasOnlySubstanceUnits="true"/>
+      <species id="Succinate_1" compartment="glycosome" initialAmount="0" hasOnlySubstanceUnits="true"/>
+      <species id="Fumarate" compartment="glycosome" initialAmount="0" hasOnlySubstanceUnits="true"/>
+      <species id="Malate" compartment="glycosome" initialAmount="0" hasOnlySubstanceUnits="true"/>
+      <species id="Oxac" compartment="glycosome" initialAmount="0" hasOnlySubstanceUnits="true"/>
+      <species id="PEP" compartment="cytosol" initialAmount="0" hasOnlySubstanceUnits="true"/>
+      <species id="ATP_2" compartment="cytosol" initialAmount="2000" hasOnlySubstanceUnits="true"/>
+      <species id="ATP" compartment="glycosome" initialAmount="2000" hasOnlySubstanceUnits="true"/>
+      <species id="ADP_2" compartment="cytosol" initialAmount="4000" hasOnlySubstanceUnits="true"/>
+      <species id="PGA" compartment="cytosol" initialAmount="0" hasOnlySubstanceUnits="true"/>
+      <species id="ADP" compartment="glycosome" initialAmount="2000" hasOnlySubstanceUnits="true"/>
+      <species id="NADplus" compartment="glycosome" initialAmount="2000" hasOnlySubstanceUnits="true"/>
+      <species id="BPGA" compartment="cytosol" initialAmount="0" hasOnlySubstanceUnits="true"/>
+      <species id="Glycerol" compartment="glycosome" initialAmount="0" hasOnlySubstanceUnits="true"/>
+      <species id="Gly_3_P" compartment="glycosome" initialAmount="0" hasOnlySubstanceUnits="true"/>
+      <species id="G_3_P" compartment="glycosome" initialAmount="0" hasOnlySubstanceUnits="true"/>
+      <species id="DHAP" compartment="glycosome" initialAmount="0" hasOnlySubstanceUnits="true"/>
+      <species id="FBP" compartment="glycosome" initialAmount="0" hasOnlySubstanceUnits="true"/>
+      <species id="Fructose_6_phosphate" compartment="glycosome" initialAmount="0" hasOnlySubstanceUnits="true"/>
+      <species id="Glucose_6_phosphate" compartment="glycosome" initialAmount="0" hasOnlySubstanceUnits="true"/>
+      <species id="Dglucose" compartment="glycosome" initialAmount="1000" hasOnlySubstanceUnits="true"/>
+    </listOfSpecies>
+    <listOfReactions>
+      <reaction id="transition_70" reversible="false">
+        <listOfReactants>
+          <speciesReference species="Malate"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Malate_mito"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <cn type="integer"> 20 </cn>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="transition_68" reversible="false">
+        <listOfReactants>
+          <speciesReference species="Pyruvate"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="AcetylCoa"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <cn type="integer"> 100 </cn>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="transition_B" reversible="false">
+        <listOfReactants>
+          <speciesReference species="AcetylCoa"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Acetate"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <cn type="integer"> 100 </cn>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="transition_A" reversible="false">
+        <listOfReactants>
+          <speciesReference species="Malate_mito"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Succinate_2"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <cn type="integer"> 100 </cn>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="transition_22" reversible="false">
+        <listOfReactants>
+          <speciesReference species="NADPplus"/>
+          <speciesReference species="Malate"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="NADPH"/>
+          <speciesReference species="Pyruvate"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <cn type="integer"> 30 </cn>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="transition_13" reversible="false">
+        <listOfReactants>
+          <speciesReference species="ADP_2"/>
+          <speciesReference species="PEP"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ATP_2"/>
+          <speciesReference species="Pyruvate"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <cn type="integer"> 15 </cn>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="transition_15" reversible="false">
+        <listOfReactants>
+          <speciesReference species="PEP"/>
+          <speciesReference species="ADP"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ATP"/>
+          <speciesReference species="Pyruvate"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <cn type="integer"> 15 </cn>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="transition_18" reversible="false">
+        <listOfReactants>
+          <speciesReference species="NADH"/>
+          <speciesReference species="Fumarate"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="NADplus"/>
+          <speciesReference species="Succinate_1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <cn type="integer"> 100 </cn>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="transition_17" reversible="false">
+        <listOfReactants>
+          <speciesReference species="Malate"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Fumarate"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <cn type="integer"> 50 </cn>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="transition_16" reversible="false">
+        <listOfReactants>
+          <speciesReference species="NADH"/>
+          <speciesReference species="Oxac"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="NADplus"/>
+          <speciesReference species="Malate"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <cn type="integer"> 100 </cn>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="transition_14" reversible="false">
+        <listOfReactants>
+          <speciesReference species="ADP"/>
+          <speciesReference species="PEP"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ATP"/>
+          <speciesReference species="Oxac"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <cn type="integer"> 70 </cn>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="transition_11_12" reversible="false">
+        <listOfReactants>
+          <speciesReference species="PGA"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="PEP"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <cn type="integer"> 100 </cn>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="transition_9" reversible="false">
+        <listOfReactants>
+          <speciesReference species="ADP_2"/>
+          <speciesReference species="BPGA"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ATP_2"/>
+          <speciesReference species="PGA"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <cn type="integer"> 100 </cn>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="transition_10" reversible="false">
+        <listOfReactants>
+          <speciesReference species="ADP"/>
+          <speciesReference species="BPGA"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="PGA"/>
+          <speciesReference species="ATP"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <cn type="integer"> 0 </cn>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="transition_8" reversible="false">
+        <listOfReactants>
+          <speciesReference species="NADplus"/>
+          <speciesReference species="G_3_P"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="NADH"/>
+          <speciesReference species="BPGA"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <cn type="integer"> 100 </cn>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="transition_7" reversible="false">
+        <listOfReactants>
+          <speciesReference species="ADP"/>
+          <speciesReference species="Gly_3_P"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ATP"/>
+          <speciesReference species="Glycerol"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <cn type="integer"> 100 </cn>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="transition_6" reversible="false">
+        <listOfReactants>
+          <speciesReference species="NADH"/>
+          <speciesReference species="DHAP"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="NADplus"/>
+          <speciesReference species="Gly_3_P"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <cn type="integer"> 0 </cn>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="transition_5" reversible="false">
+        <listOfReactants>
+          <speciesReference species="DHAP"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="G_3_P"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <cn type="integer"> 100 </cn>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="transition_4" reversible="false">
+        <listOfReactants>
+          <speciesReference species="FBP"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="G_3_P"/>
+          <speciesReference species="DHAP"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <cn type="integer"> 100 </cn>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="transition_3" reversible="false">
+        <listOfReactants>
+          <speciesReference species="ATP"/>
+          <speciesReference species="Fructose_6_phosphate"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ADP"/>
+          <speciesReference species="FBP"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <cn type="integer"> 100 </cn>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="transition_2" reversible="false">
+        <listOfReactants>
+          <speciesReference species="Glucose_6_phosphate"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Fructose_6_phosphate"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <cn type="integer"> 100 </cn>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="transition_1" reversible="false">
+        <listOfReactants>
+          <speciesReference species="ATP"/>
+          <speciesReference species="Dglucose"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ADP"/>
+          <speciesReference species="Glucose_6_phosphate"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <cn type="integer"> 100 </cn>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

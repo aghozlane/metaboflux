@@ -1,0 +1,26 @@
+<parameters>
+	<name>simulation_glycosome</name>
+	<nbSimulations>5</nbSimulations>
+	<nbtriesSa>1</nbtriesSa> <!--how many points do we try before stepping for SA and Min-->
+	<nbtriesMod>100</nbtriesMod> <!--how many points do we try before stepping for SA and Min-->
+	<nbiters>1</nbiters> <!--how  many iterations for each T?-->
+	<stepsize>200.0</stepsize> <!--max step size in random walk-->
+	<boltzmann>1.0</boltzmann> <!--Boltzmann constant-->
+	<Tinitial>1.0</Tinitial> <!--initial temperature-->
+	<muT>1.002</muT>  <!--damping factor for temperature-->
+	<Tmin>0.50</Tmin> <!--Minimum temperature-->
+	<groupSize>5</groupSize> <!--Considered energy-->
+	<nbGroup>4</nbGroup> <!--Expected group-->
+	<interestEnergy>4</interestEnergy> <!--Best energy-->
+    
+    <listOfBannedCompounds>
+	<compounds id="NADH"/><compounds id="NADPH"/><compounds id="NADPplus"/><compounds id="ATP_2"/><compounds id="ATP"/><compounds id="ADP_2"/><compounds id="ADP"/><compounds id="NADplus"/></listOfBannedCompounds>
+	<listOfReactions><noeud reference="0"><reaction id="transition_13"/><reaction id="transition_15"/><reaction id="transition_14"/></noeud><noeud reference="1"><reaction id="transition_70"/><reaction id="transition_22"/><reaction id="transition_17"/></noeud></listOfReactions><listOfSpecies>
+	<species id="Succinate_2" finalAmount="400" weight="1"/><species id="Succinate_1" finalAmount="1000" weight="1"/><species id="Acetate" finalAmount="600" weight="1"/></listOfSpecies>
+	<listOfKineticlaw>
+	</listOfKineticlaw>
+
+    <representations>
+
+        <graph reference="1" title="Representation of interest molecules final amount" subtitle="4 best energies - 4 simulations" xtext="Energy" ytext="Number of Molecules" height="480" width="480"/><graph reference="0" title="Estimation of the standard deviation" subtitle="4 studied simulations" xtext="Simulation number" ytext="Standard deviation" height="480" width="480"/><graph reference="3" title="Hierarchical cluster analysis of reactions ratio (Energies)" subtitle="4 defined groups - 4 first considered energies - 4 simulations" xtext="Simulations energies" ytext="Height" height="480" width="480"/><graph reference="2" title="Hierarchical cluster analysis of reactions ratio" subtitle="4 defined groups - 4 first considered energies - 4 simulations" xtext="Simulations number" ytext="Height" height="480" width="480"/><graph reference="4" title="Representation of group's reactions ratio" subtitle="4 first considered energies - 4 simulations" xtext="Groups" ytext="Reactions ratio (%)" height="480" width="480"/></representations>
+</parameters>

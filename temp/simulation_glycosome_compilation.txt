@@ -1,0 +1,15 @@
+==> ../temp/simulation_glycosome_simulated_annealing_1.txt <==
+  109       111      0.804301  [ 38.31  0.28  61.41  43.49  4.47  52.03 ]        0.632257      0.632257
+
+==> ../temp/simulation_glycosome_simulated_annealing_2.txt <==
+  183       185      0.693756  [ 46.07  0.77  53.16  16.01  26.36  57.63 ]         1.20924       1.20924
+
+==> ../temp/simulation_glycosome_simulated_annealing_3.txt <==
+  250       252      0.606834  [ 4.58  28.00  67.42  31.88  1.07  67.05 ]       0.0691448     0.0691448
+
+==> ../temp/simulation_glycosome_simulated_annealing_4.txt <==
+  163       165       0.72204  [ 1.65  32.07  66.28  20.96  25.54  53.51 ]        0.769378      0.769378
+
+==> ../temp/simulation_glycosome_simulated_annealing_5.txt <==
+  164       166      0.720599  [ 37.09  16.19  46.72  73.19  0.53  26.28 ]          1.2786        1.2786
+

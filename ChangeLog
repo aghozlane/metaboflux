@@ -1,0 +1,14 @@
+Release 2.0.6 MetaBoflux
+	No change.
+Release 2.0.5 MetaBoflux
+	Better english support, few code improvements.
+Release 2.0.4 MetaBoflux
+	Correction of libGetfiles.
+Release 2.0.3 MetaBoflux
+	Correction of libCompute.
+Release 2.0.2 MetaBoflux
+	Improved documentation.
+Release 2.0.1 MetaBoflux
+	Easier install with CMake. 
+Release 2.0.0 MetaBoflux
+	Initial release. 

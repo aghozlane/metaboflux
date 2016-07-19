@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/MetaboFlux/!svn/ver/32/metaboflux/lib
+END
+libGetfiles.py
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/MetaboFlux/!svn/ver/105/metaboflux/lib/libGetfiles.py
+END
+libAnalysis.py
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/MetaboFlux/!svn/ver/102/metaboflux/lib/libAnalysis.py
+END
+libCompute.py
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/MetaboFlux/!svn/ver/100/metaboflux/lib/libCompute.py
+END
+libXml.py
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/MetaboFlux/!svn/ver/100/metaboflux/lib/libXml.py
+END

@@ -1,0 +1,184 @@
+                            MetaBoFlux
+
+ Amine Ghozlane, Frederic Bringaud, Fabien Jourdan and Patricia Thébault
+
+  Please see the file ChangeLog for a log of recent changes in MetaBoFlux
+
+        More information about MetaBoFlux is available online at
+           	 http://www.cbib.u-bordeaux2.fr/metaboflux/
+
+       Please report problems with MetaBoFlux using the tracker at
+          http://sourceforge.net/projects/metaboflux/support
+
+  Mailing lists and online web forums for discussing MeTaBoFlux are at
+          http://sourceforge.net/projects/metaboflux/forums
+
+    To contact MetaBoFlux developer directly, send email to
+                       amine.ghozlane@labri.fr
+
+   ,----------------------------------------------------------------.
+  | Table of contents                                               |
+  | 1. Quick start                                                  |
+  | 2. Reporting bugs and other problems                            |
+  | 4. Mailing lists                                                |
+  | 4. Licensing and distribution                                   |
+  | 5. Acknowledgments                                              |
+   `----------------------------------------------------------------'
+         Date of last update to this file: 2011-01-12 18:00:00
+
+================
+=1. QUICK START=
+================
+
+==================
+1.1. Requirements
+==================
+
+  - CMake >= 2.6
+  - Gcc >= 3.4.0
+  - Python >= 2.6 with package python-dev
+  - LibXmL2 with package libxml2-dev
+  -	R >= 2.10.0+ (http://www.r-project.org/) with packages gplots (http://cran.r-project.org/web/packages/gplots/) and XML (http://cran.r-project.org/web/packages/XML/)
+  - GSL >= 1.14 (http://www.gnu.org/software/gsl/)
+  - MPI v2: openmpi (http://www.open-mpi.org/) or mpich2 (http://www.mcs.anl.gov/research/projects/mpich2/)
+  - LibSBML - v4.2.0 with python option (http://sbml.org/Software/libSBML)
+  
+
+
+==================
+1.2. Installation
+==================
+
+To install MetaBoFlux, run :
+	
+	./MetaBoFlux_install.sh -I
+
+MetaBoFlux is now available in MetaBoFlux-<version>/bin repertory.
+
+=====================
+1.3. Compile the Api
+=====================
+
+To compile the documentation API be sure that you have install :
+
+  - Doxygen (www.doxygen.org/)
+  
+Then run :
+
+	./MetaBoFlux_install.sh -D
+
+The Api documentation is now available in MetaBoFlux-<version>/doc repertory.
+
+======================
+1.4. Start MetaboFlux
+======================
+
+The first step is to load SBML library package for python :
+
+	export PYTHONPATH=DIR/lib/version/site-packages/libsbml:DIR/lib/version/site-packages
+
+Verification :
+
+	python
+	>>>import(libsbml)
+	>>>
+
+The complete list of command is obtain by :
+
+	./bin/MetaBoFlux.py -h
+
+Example :
+
+	./bin/MetaBoFlux.py -smr --par ./examples/parametre_glycosome.xml --sbml ./examples/modele_glycosome.xml  --sim_out ./temp/ --min_out ./temp/ --stat_out ./temp/
+
+Running options :
+
+Option          Case            Filename        Type    Description
+-------------------------------------------------------------------
+-s              no              no              no      Simulated annealing
+-m              no              no              no      Minimization
+-r              no              no              no      Statistic representation
+-t              -s -t           no              no      Number of thread to launch
+-p              -s -t           no              Out     Connect port
+--debug         -s -m           no              Output  Debug file output
+--sbml          -s -m           sbml.xml        Input   SBML file
+--par           -s -m -r        parameter.xml   Input   Parameter file
+--sim_out       -s -m           Repertory/      In/Out  Simulation out repertory
+--min_out       -m -r           Repertory/      In/Out  Minimization out file
+--stat_out      -r              Repertory/      Output  Statistic out repertory
+
+======================================
+=2. Reporting bugs and other problems= 
+======================================
+
+We invite you to report bugs and other problems using the issue
+tracker for MetaBoFlux on SourceForge.  The following URL will take you
+there directly:
+
+  http://sourceforge.net/projects/metaboflux/support
+
+You can also ask questions on the 'metaboflux-support@lists.sourceforge.net' mailing
+list, either over email or using the web forum interface (see below).
+
+==================
+=3. MAILING LISTS=
+==================
+
+=======================
+Discussion lists
+=======================
+
+All discussion lists, their web interfaces and their RSS feeds are at
+
+         http://sourceforge.net/projects/metaboflux/forums
+
+If you use MetaBoFLux, we encourage you to subscribe to 
+'metaboflux-support@lists.sourceforge.net' mailing
+list, where people discuss the development, use, and interoperability 
+of the software.
+
+If you are interested in helping to modify MetaBoFlux, or just want to
+know about deeper issues and technical topics, you are welcome to
+subscribe to the 'metaboflux-development@lists.sourceforge.net' mailing list.  
+Being a member of metaboflux-development will enable you to keep in touch with the
+latest developments in MetaBoFlux as well as to ask questions and share
+your experiences with fellow developers and users of MetaBoFlux.
+
+===============================
+=4. LICENSING AND DISTRIBUTION=
+===============================
+Licensing and Distribution Terms for MetaBoFlux:
+
+Copyright (C) 2010 Amine Ghozlane from LaBRI and University of Bordeaux 1   
+                                                                            
+MetaBoFlux is free software: you can redistribute it and/or modify          
+it under the terms of the GNU Lesser General Public License as published by        
+the Free Software Foundation, either version 3 of the License, or           
+(at your option) any later version.                                         
+                                                                            
+MetaBoFlux is distributed in the hope that it will be useful,               
+but WITHOUT ANY WARRANTY; without even the implied warranty of              
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the               
+GNU General Public License for more details.                                
+                                                                            
+You should have received a copy of the GNU Lesser General Public License           
+along with this program name "COPYING".  If not, see <http://www.gnu.org/licenses/>.
+
+====================
+=5. Acknowledgments= 
+====================
+
+This work is supported by the Agence Nationale de la Recherche
+(ANR) program METABOTRYP of the ANR-MIME and
+SYSTRYP of the ANR-BBSRC call and the CBiB.
+
+-----------------------------------------------
+File author: A. Ghozlane
+Last Modified: $Date: 2011-01-12 18:00:00 $
+Last Modified By: $Author: Ghozlane $
+-----------------------------------------------
+
+# The following is for [X]Emacs users.  Please leave in place.
+# Local Variables:
+# fill-column: 70
+# End:
